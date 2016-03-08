@@ -11,9 +11,7 @@ var {
 
 var SelectScreen = require('./SelectScreen');
 
-
-
-class TestApp extends Component {
+class ImagePickerTest extends Component {
 
   render() {
     return (
@@ -36,6 +34,6 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('TestApp', () => TestApp);
+AppRegistry.registerComponent('ImagePickerTest', () => ImagePickerTest);
 
-module.exports = TestApp;
+module.exports = ImagePickerTest;

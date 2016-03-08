@@ -12,6 +12,7 @@ import React, {
 } from 'react-native';
 
 var AlbumScreen = require('./AlbumScreen');
+var ImagePicker = require('./ImagePicker');
 
 
 class SelectScreen extends Component {
@@ -25,6 +26,10 @@ class SelectScreen extends Component {
             onPress={this.buttonClicked.bind(this)}>
             <Text style={styles.buttonText}>Open Album</Text>
           </TouchableHighlight>
+          <TouchableHighlight style={styles.button}
+            onPress={this.openImagePicker.bind(this)}>
+            <Text style = {styles.buttonText}>Open Image Picker</Text>
+            </TouchableHighlight>
       </View>
     );
   }
@@ -40,6 +45,12 @@ class SelectScreen extends Component {
       });
       
     } 
+  }
+  openImagePicker(){
+    this.props.navigator.push({
+      title: "Image Picker",
+      component: ImagePicker
+    });
   }
 
 
@@ -62,7 +73,8 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#48BBEC',
     alignSelf: 'stretch',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: 10
   }
 });
 
