@@ -9,6 +9,8 @@ const {
  	TouchableHighlight,
 } = React;
 
+var SelectScreen = require('./SelectScreen');
+
 class Login extends Component {
 	state = {
 		email: '',
@@ -44,7 +46,10 @@ render(){
 		);
 }
 login (){
-
+	 this.props.navigator.push({
+        title: "SelectScreen",
+        component: SelectScreen
+      });
 }
 
 }

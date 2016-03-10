@@ -13,7 +13,6 @@ import React, {
 
 var AlbumScreen = require('./AlbumScreen');
 var ImagePicker = require('./ImagePicker');
-var Login = require('./login');
 
 
 class SelectScreen extends Component {
@@ -31,10 +30,6 @@ class SelectScreen extends Component {
             onPress={this.openImagePicker.bind(this)}>
             <Text style = {styles.buttonText}>Open Image Picker</Text>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.button}
-            onPress={this.openLogin.bind(this)}>
-            <Text style = {styles.buttonText}>Open Login</Text>
-            </TouchableHighlight>
       </View>
     );
   }
@@ -46,9 +41,7 @@ class SelectScreen extends Component {
       this.props.navigator.push({
         title: "AlbumScreen",
         component: AlbumScreen
-        
       });
-      
     } 
   }
   openImagePicker(){
@@ -56,12 +49,6 @@ class SelectScreen extends Component {
       title: "Image Picker",
       component: ImagePicker
     });
-  }
-  openLogin(){
-    this.props.navigator.push({
-      title: "Login",
-      component: Login
-    })
   }
 
 

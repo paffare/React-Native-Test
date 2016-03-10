@@ -9,7 +9,7 @@ var {
   Component
 } = React;
 
-var SelectScreen = require('./SelectScreen');
+var Login = require('./login');
 
 class ImagePickerTest extends Component {
 
@@ -19,7 +19,7 @@ class ImagePickerTest extends Component {
         style={styles.container}
         initialRoute={{
           title: 'TestApp',
-          component: SelectScreen,
+          component: Login,
           passProps: {}
         }}
       />
